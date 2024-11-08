@@ -88,3 +88,17 @@ initial scale effect applied to layers, from background to foreground
   transform: scale(1.7);
   border: 5px solid #56ff75;
 }
+
+.worldmap-viewport {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.worldmap {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  transform-origin: center center;
+}

@@ -1,4 +1,8 @@
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+// HEADER PARALLAX
 
 var parallaxContainer = document.querySelector(".parallax-container");
 
@@ -46,4 +50,57 @@ parallaxContainer.addEventListener("mousemove", function (event) {
 
   document.querySelector(".layer-4").style.transform =
     "translate(" + deltaX4 + "px, " + deltaY4 + "px) scale(1.7)";
+});
+
+// WORLDMAP
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".worldmap",
+    start: "top top",
+    end: "+=20000",
+    markers: true,
+    scrub: 1,
+    pin: true,
+  },
+});
+
+tl.to(".worldmap", {
+  scale: 2.5,
+  x: "55%",
+  y: "50%",
+  duration: 3,
+  ease: "power1.inOut",
+});
+
+tl.to(".worldmap", {
+  scale: 2,
+  x: "10%",
+  y: "30%",
+  duration: 2.5,
+  ease: "power1.inOut",
+});
+
+tl.to(".worldmap", {
+  scale: 3,
+  x: "-30%",
+  y: "80%",
+  duration: 2,
+  ease: "power1.inOut",
+});
+
+tl.to(".worldmap", {
+  scale: 2,
+  x: "-20%",
+  y: "10%",
+  duration: 1,
+  ease: "power1.inOut",
+});
+
+tl.to(".worldmap", {
+  scale: 2.5,
+  x: "-90%",
+  y: "-50%",
+  duration: 1,
+  ease: "power1.inOut",
 });
