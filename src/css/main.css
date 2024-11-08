@@ -102,3 +102,26 @@ initial scale effect applied to layers, from background to foreground
   position: absolute;
   transform-origin: center center;
 }
+
+p {
+  font-size: 100px;
+  z-index: 2;
+}
+
+.storytelling-container {
+  margin-top: 20000px;
+}
+
+.storytelling-container img {
+  width: auto;
+}
+
+.section-produit {
+  padding: 400px 100px;
+  border: red solid 3px;
+}
+
+.footer {
+  padding: 200px 100px;
+  background: grey;
+}
